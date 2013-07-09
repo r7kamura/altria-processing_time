@@ -6,4 +6,4 @@ section.processing_time
   h1 Processing Time
   .chart
     - builds = @resource.builds.finished
-    = line_chart builds.map {|build| [build.id.to_s, build.sec] }, min: 0
+    = line_chart builds.map {|build| [build.created_at, build.sec] }, min: 0
